@@ -9,9 +9,9 @@ jobs:
   runs-on: ubuntu-latest
   steps:
     - uses: actions/checkout@v2
-    - name: Show repo
+    - name: list-files
       run: |
         ls -R
-    - name: Show the content of all the files
+    - name: show-files
       run: |
         find . -type f -not -path */\.* -exec echo '{}' ';' -exec cat '{}' ';'
