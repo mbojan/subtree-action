@@ -1,11 +1,7 @@
-# A dummy action script
-
 on: [push, pull_request]
-
 name: Dummy-action
-
 jobs:
-  name: Show-files
+  name: show-repo
   runs-on: ubuntu-latest
   steps:
     - uses: actions/checkout@v2
