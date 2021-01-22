@@ -1,13 +1,15 @@
 on: [push, pull_request]
 name: Dummy-action
 jobs:
-  name: show-repo
-  runs-on: ubuntu-latest
-  steps:
-  - uses: actions/checkout@v2
-  - name: list-the-files
-    run: |
-      ls -R
-  - name: show-the-files
-    run: |
-      find . -type f -not -path */\.* -exec echo '{}' ';' -exec cat '{}' ';'
+  show-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: list-the-files
+        run: |
+          ls -R
+
+      - name: show-the-files
+        run: |
+          find . -type f -not -path */\.* -exec echo '{}' ';' -exec cat '{}' ';'
