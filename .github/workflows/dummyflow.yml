@@ -8,10 +8,10 @@ jobs:
   name: Show-files
   runs-on: ubuntu-latest
   steps:
-    - uses: actions/checkout@v2
-    - name: list-files
-      run: |
-        ls -R
-    - name: show-files
-      run: |
-        find . -type f -not -path */\.* -exec echo '{}' ';' -exec cat '{}' ';'
+  - uses: actions/checkout@v2
+  - name: list-the-files
+    run: |
+      ls -R
+  - name: show-the-files
+    run: |
+      find . -type f -not -path */\.* -exec echo '{}' ';' -exec cat '{}' ';'
